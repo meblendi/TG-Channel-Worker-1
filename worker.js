@@ -29,8 +29,8 @@ async function handleRequest(env) {
     { symbol: "ETHUSDT", title: "اتریوم", unit: "دلار", factor: 1 },
   ];
 
-  const tgBotToken = '7921890394:AAErf6ISrgZ71_MmXSJZSRpw4eJon1MPjuA';
-  const tgChannel = '@irancurrency_price';
+  const tgBotToken = env.BOT_TOKEN;
+  const tgChannel = env.CHAT_ID;
 
   const sendToTelegram = async (messages) => {
     const tgApiUrl = `https://api.telegram.org/bot${tgBotToken}/sendMessage`;
